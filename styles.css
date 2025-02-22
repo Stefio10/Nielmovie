@@ -1,0 +1,317 @@
+/* Reset CSS de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.8));
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header .logo h1 {
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Section Hero */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-in-out;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    animation: slideInRight 1s ease-in-out;
+    color: #fff;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6);
+}
+
+/* Sections générales */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Compétences */
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.competence {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.competence:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(255, 111, 97, 0.6);
+    background: rgba(255, 111, 97, 0.2);
+}
+
+.competence i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+.competence h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.competence p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Réalisations */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(255, 111, 97, 0.6);
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* À propos */
+.apropos-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.apropos-content h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+.apropos-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.apropos-content ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.8));
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6f61;
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Effets de lumière */
+@keyframes lightEffect {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 111, 97, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+    }
+}
+
+.competence:hover, .gallery-item:hover {
+    animation: lightEffect 1.5s infinite;
+}
